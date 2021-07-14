@@ -1,0 +1,29 @@
+01. 
+1. printf("Do you want to enter a middle initial(s)? (y or n): ");
+    scanf("%s%*c", &yesNo);
+corrected:
+	printf("Do you want to enter a middle initial(s)? (y or n): ");
+   	 scanf("%c%*c", &yesNo);
+- yesNo variable stores char values.
+
+2. scanf("%6[^\n]%*c", name->middleInitial);
+corrected:
+	scanf("%4[^\n]%*c", name->middleInitial);
+- places assigned to middleInitials is 5
+
+3. if (yesNo == "y" || yesNo == "Y") {
+corrected:
+	if (yesNo == 'y' || yesNo == 'Y') {
+- should use single quotation marks when check char values
+
+4. if (yesNo == 'y' && yesNo == 'Y') {
+corrected: 
+	if (yesNo == 'y' || yesNo == 'Y') {
+- should check 'OR' in the condition
+
+02.
+
+03.
+
+04. it reads and ignore the characters which not belongs to the variable type of particular variable.
+05. Used to read the whole line. it will scan all the characters in the input including spaces and it will stop after scanning '\n'
